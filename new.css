@@ -95,10 +95,10 @@ body {
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
 .CA:nth-child(1):before {
-  background-image: url(https://upload.wikimedia.org/wikipedia/en/d/df/RedHotChiliPeppersCalifornication.jpg);
+  background-image: url(https://gph.is/1JpP0DH );
 }
 .CA:nth-child(2):before {
-  background-image: url(http://4.bp.blogspot.com/_SXE6yGSHFZM/R1Esq2jBXTI/AAAAAAAAAFA/xO_WypFH45k/s1600-R/Red_Hot_Chili_Peppers-One_Hot_Minute-Frontal.jpg);
+  background-image: url(https://gph.is/1JpP0DH );
 }
 .CA:nth-child(3):before {
   background-image: url(https://lastfm.freetls.fastly.net/i/u/ar0/b909cdaacc8a4f6acf9543bb7c64f534.jpg);
@@ -701,3 +701,12 @@ body
 	width:100%;
 }
 
+.rotate {
+  
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.rotate:hover {
+
+  transform: rotate(360deg);
+}

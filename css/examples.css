@@ -307,6 +307,19 @@ p{
 	opacity: 0.6;
 }
 
+
+/* Section 6
+ * --------------------------------------- */
+#section6 p{
+	opacity: 0.6;
+}
+
+
+/* Section 7
+ * --------------------------------------- */
+#section7 p{
+	opacity: 0.6;
+}
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
 #pp-nav.custom .pp-tooltip{
