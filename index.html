@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>nicks portfolio</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="css/http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" href="new.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="css/favicon.png" />
+<!-- Place favicon.ico in the root directory -->
+
+<!-- CSS here -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/animate.min.css" />
+<link rel="stylesheet" href="css/magnific-popup.css" />
+<link rel="stylesheet" href="css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="css/flaticon.css" />
+<link rel="stylesheet" href="css/slick.css" />
+<link rel="stylesheet" href="css/aos.css" />
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+
+
+<link rel="stylesheet" href="css/https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<link rel="stylesheet" href="css/https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="css/https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/flaticon.css">
+
+<script src="new.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+				sectionsColor: ['white', 'white', 'white', '#39C', '#2C3E50'],
+				 loopTop: true,
+				loopBottom: true,
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'page 5']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+
+
+				
+			});
+
+
+
+		
+
+			/*
+		    * Internal use of the demo website
+		    */
+		    $('#showExamples').click(function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				$('#examplesList').toggle();
+			});
+
+			$('html').click(function(){
+				$('#examplesList').hide();
+			});
+	    });
+    </script>
+
+
+    <style>
+    /* Section 1
+	 * --------------------------------------- */
+	#section1 h1{
+		color: rgb(158, 149, 149);
+	}
+	#section1 p{
+		color: #333;
+		color: rgba(0,0,0,0.3);
+	}
+	#section1 img{
+		margin: 20px 0;
+		opacity: 0.7;
+	}
+
+	/* Section 2
+	 * --------------------------------------- */
+	#section2 h1,
+	#section2 p{
+		z-index: 3;
+	}
+	#section2 p{
+		opacity: 0.8;
+	}
+
+	#section2 #colors{
+		right: 60px;
+		bottom: 0;
+		position: absolute;
+		height: 413px;
+		width: 258px;
+		background-image: url(imgs/colors.gif);
+		background-repeat: no-repeat;
+	}
+
+	/* Section 3
+	 * --------------------------------------- */
+	#section3 #colors{
+		left: 60px;
+		bottom: 0;
+	}
+	#section3 p{
+		color: #757575;
+	}
+
+	#colors2,
+	#colors3{
+		position: absolute;
+		height: 163px;
+		width: 362px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	#colors2{
+		background-image: url(imgs/colors2.gif);
+		top:0;
+	}
+	#colors3{
+		background-image: url(imgs/colors3.gif);
+		bottom:0;
+	}
+
+	/* Section 4
+	 * --------------------------------------- */
+	#section4 p{
+		opacity: 0.6;
+	}
+
+		/* Section 5
+	 * --------------------------------------- */
+	#section5 p{
+		opacity: 0.6;
+	}
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	#pp-nav.custom .pp-tooltip{
+		color: #AAA;
+	}
+	#markup{
+		display: block;
+		width: 450px;
+		margin: 20px auto;
+		text-align: left;
+	}
+
+</style>
+
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+		<li style="color: #6a0ddc;" data-menuanchor="page2"><a  href="#page2">About me </a></li>
+		<li data-menuanchor="page3"><a href="#page3">Portfolio</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Contact</a></li>
+			<li data-menuanchor="page5"><a href="#page5">Page 5</a></li>
+	</ul>
+
+
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+		<div class="page1" >	
+	<div class="b">	
+<p class="p">Welcome to my web developer portfolio <br><a class="a" href="http://nicholasnwanochie.com/">Nicholas Nwanochie</a></p>
+</div>	
+
+
+			</div>
+		</div>
+		
+
+	    <div class="section" id="section2">
+	    	<div class="intro">
+	    		<div id="colors"></div>
+				<img class="nick" src="imgs/nick.jpg" alt="">
+				<h1>Nicholas-Nwanochie</h1>
+				<p>Professional web developer/Software
+					Engineer with passion and drive in this field​.</p>
+				<a target="_blank" href="https://github.com/Nicholas-Nwanochie"><span class="flaticon-github"></span></a>	
+				<a  href="https://www.linkedin.com/in/nicholas-nwanochie-07889a175/"><span class="flaticon-linkedin"></span></a>	
+	    	</div>
+		</div>
+		
+
+	    <div class="section " id="section3">
+
+
+			<div class="col-lg-12   ">
+
+			<!-- <a href='https://www.youtube.com/watch?v=szLmLFsisbY' target="_blank"> -->
+				<section class="">
+					<div class="">
+						<div class="row mt-4">
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style=" background-image: linear-gradient(to bottom,  white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">P</h1>
+									</div>
+								</div>
+			
+							</div>
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style="background-image: linear-gradient(to bottom,  white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">O</h1>
+									</div>
+								</div>
+			
+							</div>
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style="background-image: linear-gradient(to bottom,  white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">R</h1>
+									</div>
+								</div>
+			
+							</div>
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style="background-image: linear-gradient(to bottom,  white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">T</h1>
+									</div>
+								</div>
+			
+							</div>
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style="background-image: linear-gradient(to bottom,  white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">F</h1>
+									</div>
+								</div>
+			
+							</div>
+			
+							<div class="text-center widthset">
+								<div class="position-relative rounded-top progress-wrapper"
+									style="background-image: linear-gradient(to bottom, white);">
+									<div class="wave" style="bottom: 35%;">
+										<h1 class="heading-style">O</h1>
+									</div>
+								</div>
+			
+							</div>
+
+								<div class="text-center widthset">
+									<div class="position-relative rounded-top progress-wrapper"
+										style="background-image: linear-gradient(to bottom, white);">
+										<div class="wave" style="bottom: 35%;">
+											<h1 class="heading-style">L</h1>
+										</div>
+									</div>
+								
+								</div>
+
+
+									<div class="text-center widthset">
+										<div class="position-relative rounded-top progress-wrapper"
+											style="background-image: linear-gradient(to bottom,  white);">
+											<div class="wave" style="bottom: 35%;">
+												<h1 class="heading-style">I</h1>
+											</div>
+										</div>
+									
+									</div>
+
+										<div class="text-center widthset">
+											<div class="position-relative rounded-top progress-wrapper"
+												style="background-image: linear-gradient(to bottom, white);">
+												<div class="wave" style="bottom: 35%;">
+													<h1 class="heading-style">O</h1>
+												</div>
+											</div>
+										
+										</div>
+			
+						</div>
+					</div>
+				</section>
+			</a>
+		</div>
+
+
+
+	    	<div class="">
+
+	<div class="w3-black ">
+		<main class="page-content pixgrid">
+	
+
+	
+	
+			<div class="speaker-box">
+				<div class=" speaker-thumb">
+					<img class="CA" height="100%" src="imgs/mma-2495822_1920 (2).jpg" alt="img">
+				</div>
+				<div class= " speaker-overlay">
+					<span>MMA/BOXING Site</span>
+					<h4><a target="_blank" href="https://intotheoctagon.s3.us-east-2.amazonaws.com/GS/index.html">Into the Octogon</a></h4>
+					<a target="_blank" href="https://intotheoctagon.s3.us-east-2.amazonaws.com/GS/index.html" class="arrow-btn">More
+						information <span></span></a>
+				</div>
+			</div>
+
+
+
+			<div class=" speaker-box">
+				<div class="speaker-thumb">
+					<img class="CA" height="100%" src="imgs/homeless.jpg" alt="img">
+				</div>
+				<div class="speaker-overlay">
+					<span>Non-Profit Charity Site</span>
+					<h4><a target="_blank" href="http://ec2-3-21-247-234.us-east-2.compute.amazonaws.com/">Breaking barriers</a></h4>
+					<a target="_blank" href="http://ec2-3-21-247-234.us-east-2.compute.amazonaws.com/" class="arrow-btn">More
+						information <span></span></a>
+				</div>
+			</div>
+
+
+			<div class=" speaker-box">
+				<div class="speaker-thumb">
+					<img class="CA" height="100%" src="imgs/co.jpg" alt="img">
+				</div>
+				<div class="speaker-overlay">
+					<span>Corona Tracking app</span>
+					<h4><a target="_blank" href="https://affectionate-hopper-a549cf.netlify.com">Corona Tracker</a></h4>
+					<a target="_blank" href="https://affectionate-hopper-a549cf.netlify.com" class="arrow-btn">More
+						information <span></span></a>
+				</div>
+			</div>
+
+
+			<div class=" speaker-box">
+				<div class="speaker-thumb">
+					<img class="CA" height="100%" src="imgs/light.jpg" alt="img">
+				</div>
+				<div class="speaker-overlay">
+					<span>Electric car charging-station app </span>
+					<h4><a  target="_blank" href="https://intotheoctagon.s3.us-east-2.amazonaws.com/GS/index.html">Power Watch</a></h4>
+					<a target="_blank" href="https://intotheoctagon.s3.us-east-2.amazonaws.com/GS/index.html" class="arrow-btn">More
+						information <span></span></a>
+				</div>
+			</div>
+
+			<!-- <div class="CA glow-pics  ">
+				<div class="content">
+				
+					<h2 class="title ">Californication (1999)</h2>
+	
+					<button class="btn ">Details</button>
+				</div>
+			</div> -->
+			<!-- <div class="CA glow-pics">
+				<div class="content">
+					<h2 class="title">One Hot Minute (1995)</h2>
+					<button class="btn ">Details</button>
+				</div>
+			</div>
+			<div class="CA glow-pics">
+				<div class="content">
+					<h2 class="title">Stadium Arcadium (2006)</h2>
+					<button class="btn">Details</button>
+				</div>
+			</div>
+			<div class="CA glow-pics">
+				<div class="content">
+					<h2 class="title">The Getaway (2016)</h2>
+					<button class="btn">Details</button>
+				</div>
+			</div> -->
+			<!-- <div class="card">
+				<div class="content">
+					<h2 class="title">I'm with You (2011)</h2>
+					<button class="btn">Details</button>
+				</div>
+			</div> -->
+			<!-- <div class="card">
+				<div class="content">
+					<h2 class="title">Blood Sugar Sex Magik (1991)</h2>
+					<button class="btn">Details</button>
+				</div>
+			</div>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Mother's Milk (1989)</h2>
+					<button class="btn">Details</button>
+				</div>
+			</div>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Freaky Styley (1985)</h2> -->
+					<!-- <p class="copy">Seriously, straight up, just blast off into outer space today</p> -->
+					<!-- <button class="btn">Details</button>
+				</div>
+			</div> -->
+		</main>
+	</div>
+	    		<!-- <div id="colors2"></div>
+	    		<div id="colors3"></div> -->
+	    	</div>
+	    </div>
+	    <div class="section" id="section4">
+	    	<div class="intro">
+			
+
+
+<section id="contact" class="contact-area primary-bg pt-120 pb-120">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="section-title mb-20">
+					
+<!-- <div class="jumbotron jumbotron-fluid">
+	<div style= color: white;" class="container">
+		<h1 class="display-4">Contact Information</h1>
+		<p class="lead">Located in <span>Texas</span></p>
+	</div>
+</div> -->
+
+<div class="jumbotron">
+	<h1 class="display-4">Contact Information</h1>
+	<p class="lead">Located in <span>Texas</p>
+	<hr class="my-4">
+	<div class="contact-content col-lg-12">
+	
+	
+		<div class="contact-list">
+			<ul>
+				<li>
+					<a href="https://github.com/Nicholas-Nwanochie">
+						<span class="flaticon-github"></span>
+					</a>
+					<a href="https://www.linkedin.com/in/nicholas-nwanochie-07889a175/">
+						<span class="flaticon-linkedin-1"></span>
+					</a>
+				</li>
+	
+	
+				<li>
+					<i class="flaticon-location"></i> <br> <span>Address :</span>Houston Texas
+				</li>
+				<li>
+					<i class="flaticon-smartphone"></i> <br> <span>Phone :</span>+470
+					338 2336
+				</li>
+				<li>
+					<i class="flaticon-email"></i> <br> <span>e-mail :</span>nickclay@live.com
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+					
+				</div>
+				<div class="contact-content col-lg-12">
+					<!-- <p>Home is where the heart at and at any BJJ Dojo</p> -->
+				
+					<div class="contact-list">
+						<ul>
+							<li>
+							<a href="https://github.com/Nicholas-Nwanochie">
+							 <span class="flaticon-github"></span>
+							</a>
+							<a href="https://www.linkedin.com/in/nicholas-nwanochie-07889a175/">
+							<span class="flaticon-linkedin-1"></span>
+							</a>
+						</li>
+
+
+							<li>
+								<i class="flaticon-location"></i> <br> <span>Address :</span>Houston Texas
+							</li>
+							<li>
+								<i class="flaticon-smartphone"></i> <br> <span>Phone :</span>+470
+								338 2336
+							</li>
+							<li>
+								<i class="flaticon-email"></i> <br> <span>e-mail :</span>nickclay@live.com
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-lg-6">
+                            <div class="contact-form">
+                                <form action="#">
+                                    <input type="text" placeholder="your name *">
+                                    <input type="email" placeholder="your email *">
+                                    <textarea name="message" id="message" placeholder="your message *"></textarea>
+                                    <button class="btn">BUY TICKET</button>
+                                </form>
+                            </div>
+                        </div> -->
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	<div class="section" id="section5">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+		
+			</div>
+
+			</div>
+		
+
+	</div>
+
+
+
+</body>
+</html>
